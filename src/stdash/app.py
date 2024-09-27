@@ -18,10 +18,10 @@ df = pd.DataFrame(data)
 # request_time, prediction_time 이용해 '%Y-%m-%d %H' 형식
 # 즉 시간별 GROUPBY COUNT 하여 plt 차트 그려보기
 
-df['request_time'] = pd.to_datetime(df['request_time'])
-df['request_time'] = df['request_time'].dt.strftime('%Y-%m-%d %H')
+df['request_time'] = pd.to_datetime(df['request_time']).dt.strftime('%Y-%m-%d %H')
 time = df.groupby('request_time').size()
 
+plt.title('Requests by Date and Time')
 plt.bar(time.index, time.values)
 plt.plot(time.index, time.values, marker='o', color='r')
 plt.xlabel('Request Time')  # x축 레이블

@@ -7,4 +7,4 @@ $ streamlit run app.py
 
 ## result
 ### STEP 1
-<img src="https://github.com/user-attachments/assets/656368b4-6720-48ba-a8b6-6cfe6dc3dd18" width=700/>
+<img src="https://github.com/user-attachments/assets/ff575085-a22f-4e95-96d8-14381d37a340" width=700/>

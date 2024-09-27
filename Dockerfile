@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir --upgrade git+https://github.com/j25ng/stdash.git@0.2.0/docker
+RUN git clone -b 0.2.0/docker https://github.com/j25ng/stdash.git .
 
 RUN pip3 install -r requirements.txt
 

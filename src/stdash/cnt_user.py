@@ -22,17 +22,18 @@ prd_cnt = df.groupby('prediction_model').size().reset_index(name='prd_cnt')
 prd_cnt.set_index('prediction_model', inplace=True)
 prd_cnt.rename_axis('user', inplace=True)
 
-merge_df = req_cnt.join(prd_cnt, how='left')
+join_df = req_cnt.join(prd_cnt, how='left')
 
-index = np.arange(len(merge_df.index))
+
+index = np.arange(len(join_df.index))
 bar_width = 0.4
-b1 = plt.bar(index, merge_df['req_cnt'], bar_width, alpha=0.4, color='red', label='Req')
-b2 = plt.bar(index + bar_width, merge_df['prd_cnt'], bar_width, alpha=0.4, color='blue', label='Prd')
+b1 = plt.bar(index, join_df['req_cnt'], bar_width, alpha=0.4, color='red', label='Req')
+b2 = plt.bar(index + bar_width, join_df['prd_cnt'], bar_width, alpha=0.4, color='blue', label='Prd')
 
 plt.xlabel('User')
 plt.ylabel('Counts')
 plt.title('Request Count and Predict Count by User')
-plt.xticks(index, merge_df.index)
+plt.xticks(index, join_df.index)
 plt.legend(loc='upper left')
 
 st.pyplot(plt)

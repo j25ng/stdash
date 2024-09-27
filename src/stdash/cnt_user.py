@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import requests
 
-#st.title('')
+st.title('요청/처리 건수(사용자)')
 
 def load_data():
     url = 'http://43.202.66.118:8016/all'
@@ -26,13 +26,13 @@ merge_df = req_cnt.join(prd_cnt, how='left')
 
 index = np.arange(len(merge_df.index))
 bar_width = 0.4
-b1 = plt.bar(index, merge_df['req_cnt'], bar_width, alpha=0.4, color='red', label='req')
-b2 = plt.bar(index + bar_width, merge_df['prd_cnt'], bar_width, alpha=0.4, color='blue', label='prd')
+b1 = plt.bar(index, merge_df['req_cnt'], bar_width, alpha=0.4, color='red', label='Req')
+b2 = plt.bar(index + bar_width, merge_df['prd_cnt'], bar_width, alpha=0.4, color='blue', label='Prd')
 
 plt.xlabel('User')
 plt.ylabel('Counts')
 plt.title('Request Count and Predict Count by User')
 plt.xticks(index, merge_df.index)
-plt.legend()
+plt.legend(loc='upper left')
 
 st.pyplot(plt)

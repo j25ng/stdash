@@ -1,4 +1,3 @@
-from PIL import Image
 from rightnow.time import now
 import matplotlib.pyplot as plt
 import streamlit as st
@@ -19,8 +18,8 @@ def upload_file(file):
 file = st.file_uploader('', type=['png', 'jpg', 'jpeg'])
 
 if file is not None:
-    st.write(Image.open(file))
-    if st.button("upload"):
+    st.image(file, width=300)
+    if st.button("Upload"):
         r = upload_file(file)
         st.write(r.json())
 

@@ -17,7 +17,7 @@ if img is not None:
     img = Image.open(img)
     p = model(img)
     score = p[0]['score']
-    label = "🙅‍♀️ NOT HOT DOG 🙅‍♂️" if score < 0.8 else "🙆‍♀️ HOTDOG 🙆‍♂️"
+    label = "🙅‍♀️ NOT HOTDOG 🙅‍♂️" if score < 0.8 else "🙆‍♀️ HOTDOG 🙆‍♂️"
     st.markdown(f"## {label}")
 
 

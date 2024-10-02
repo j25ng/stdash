@@ -13,10 +13,10 @@ def load_data():
 
 data = load_data()
 df = pd.DataFrame(data)
+
 # TODO
 # request_time, prediction_time 이용해 '%Y-%m-%d %H' 형식
 # 즉 시간별 GROUPBY COUNT 하여 plt 차트 그려보기
-
 df['request_time'] = pd.to_datetime(df['request_time']).dt.strftime('%Y-%m-%d %H')
 df['prediction_time'] = pd.to_datetime(df['prediction_time']).dt.strftime('%Y-%m-%d %H')
 

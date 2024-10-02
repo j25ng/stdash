@@ -5,7 +5,7 @@
 groups = ["default", "note"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:175a1aa1bd402ea021b13a9188b42791cdf5aa5f58f404bef3ee7a8527d76aca"
+content_hash = "sha256:31d90178ce2de8824657acdd88e39e954a20fe9f8b9a363b3b3922982b77d0bf"
 
 [[metadata.targets]]
 requires_python = ">=3.11"
@@ -1616,6 +1616,17 @@ files = [
 ]
 
 [[package]]
+name = "pymysql"
+version = "1.1.1"
+requires_python = ">=3.7"
+summary = "Pure Python MySQL Driver"
+groups = ["default"]
+files = [
+    {file = "PyMySQL-1.1.1-py3-none-any.whl", hash = "sha256:4de15da4c61dc132f4fb9ab763063e693d521a80fd0e87943b9a453dd4c19d6c"},
+    {file = "pymysql-1.1.1.tar.gz", hash = "sha256:e127611aaf2b417403c60bf4dc570124aeb4a57f5f37b8e95ae399a42f904cd0"},
+]
+
+[[package]]
 name = "pyparsing"
 version = "3.1.4"
 requires_python = ">=3.6.8"
@@ -1855,6 +1866,20 @@ dependencies = [
 files = [
     {file = "rich-13.8.1-py3-none-any.whl", hash = "sha256:1760a3c0848469b97b558fc61c85233e3dafb69c7a071b4d60c38099d3cd4c06"},
     {file = "rich-13.8.1.tar.gz", hash = "sha256:8260cda28e3db6bf04d2d1ef4dbc03ba80a824c88b0e7668a0f23126a424844a"},
+]
+
+[[package]]
+name = "rightnow"
+version = "1.0.2"
+requires_python = ">=3.11"
+summary = "Default template for PDM package"
+groups = ["default"]
+dependencies = [
+    "pytz>=2024.2",
+]
+files = [
+    {file = "rightnow-1.0.2-py3-none-any.whl", hash = "sha256:e0c436891c45348b1e86c01a24a929ad9ca91e8e316aada0a45faf9391e733a6"},
+    {file = "rightnow-1.0.2.tar.gz", hash = "sha256:6a3dfbac6de8a590202474ec642fc3ba2e2d31cf6033a80ef12b44430d164030"},
 ]
 
 [[package]]

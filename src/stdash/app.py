@@ -1,8 +1,10 @@
 import streamlit as st
 
-rp_page = st.Page("req_prd.py", title="Req/Prd Time", icon=":material/dashboard:")
-cnt_page = st.Page("cnt_user.py", title="Count User", icon=":material/dashboard:")
+rp_page = st.Page("pages/cnt_time.py", title="STEP1", icon="⏱️") 
+cnt_page = st.Page("pages/cnt_user.py", title="STEP2", icon="😊")
+file_page = st.Page("pages/upload_file.py", title="STEP3", icon="🖼️")
+hotdog_page = st.Page("pages/hotdog.py", title="STEP4", icon="🌭")
+pg = st.navigation([rp_page, cnt_page, file_page, hotdog_page])
 
-pg = st.navigation([rp_page, cnt_page])
 pg.run()
 
